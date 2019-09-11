@@ -10,7 +10,7 @@ main.o: main.c
 	gcc -x c -c main.c -o main.o
 
 clean:
-	rm -f a.o b.o blah.a main.o
+	rm -f a.o b.o blah.a main.o exe
 
 blah.a: a.o
 	rm -f $@
