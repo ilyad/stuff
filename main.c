@@ -10,8 +10,8 @@ extern int *a_x;
 int main()
 {
     printf("x=*%p=%d\n", &x, x);
-    printf("*p1=*%p=%d", p1, *p1);
-    printf("*p2=*%p=%d", p2, *p2);
+    printf("*p1=*%p=%d\n", p1, *p1);
+    printf("*p2=*%p=%d\n", p2, *p2);
     printf("a_x=%p\n", a_x);
     // printf("b_x=%p\n", b_x);
     return 0;
