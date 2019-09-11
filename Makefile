@@ -1,16 +1,17 @@
 all: exe
 
 a.o: a.c
-	gcc -x c -c a.c -o a.o
+	gcc -x c -c a.c -o a.o -save-temps=obj
 
 b.o: b.c++
-	gcc -x c++ -c b.c++ -o b.o
+	gcc -x c++ -c b.c++ -o b.o -save-temps=obj
 
 main.o: main.c
-	gcc -x c -c main.c -o main.o
+	gcc -x c -c main.c -o main.o -save-temps=obj
 
+clean: SHELL:=/bin/bash
 clean:
-	rm -f a.o b.o blah.a main.o exe
+	rm -f blah.a exe {a,b,main}.{o,i,s}
 
 blah.a: a.o
 	rm -f $@
