@@ -18,6 +18,6 @@ blah.a: a.o
 	ar -t blah.a
 	nm -C blah.a
 
-exe: blah.a main.o
-	gcc blah.a main.o -o exe
+exe: main.o blah.a
+	gcc $^ -o exe
 	./exe
