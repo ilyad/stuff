@@ -1,3 +1,7 @@
+.NOTPARALLEL:
+
+rebuild: clean all
+
 all: exe
 
 a.o: a.c
@@ -11,7 +15,7 @@ main.o: main.c
 
 clean: SHELL:=/bin/bash
 clean:
-	rm -f blah.a exe {a,b,main}.{o,i,s}
+	rm -f blah.a exe {a,b,main}.{o,i,s,ii}
 
 blah.a: a.o
 	rm -f $@
