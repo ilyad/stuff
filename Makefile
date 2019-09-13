@@ -17,7 +17,7 @@ clean: SHELL:=/bin/bash
 clean:
 	rm -f blah.a exe {a,b,main}.{o,i,s,ii}
 
-blah.a: a.o
+blah.a: a.o b.o
 	rm -f $@
 	ar rc $@ $^
 	ar -t blah.a
